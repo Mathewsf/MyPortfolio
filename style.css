@@ -107,7 +107,7 @@ body {
     z-index: 100;
 }
 
-.sticky-header {
+div.sticky-header {
   position: fixed;
   top: -100px; 
   left: 0;
