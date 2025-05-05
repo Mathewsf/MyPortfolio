@@ -92,6 +92,113 @@ body * {
 body {
     background: #1f242d;
     color: #fff;
+    padding: 20px;
+}
+
+:root {
+  --primary: #0ef;
+  --dark: #1f242d;
+  --light: #fff;
+  --gray: #2a303d;
+}
+
+.skills-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: var(--primary);
+}
+
+/* Layout Principal */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.skill-card {
+  background: var(--gray);
+  border-radius: 15px;
+  padding: 25px;
+  transition: transform 0.3s;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(0, 238, 255, 0.1);
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 238, 255, 0.1);
+}
+
+/* Elementos dos Cards */
+.skill-icon {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 15px;
+}
+
+.skill-title {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+.skill-desc {
+  color: #aaa;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.skill-level {
+  height: 5px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.level-bar {
+  height: 100%;
+  border-radius: 5px;
+  background: var(--primary);
+}
+
+.learning-label {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(0, 238, 255, 0.2);
+  color: var(--primary);
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+/* Seção complementar */
+.tools-section {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.tools-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.tool-item {
+  background: rgba(0, 238, 255, 0.05);
+  padding: 10px 15px;
+  border-radius: 30px;
+  border: 1px solid rgba(0, 238, 255, 0.1);
+  font-size: 0.9rem;
 }
 
 .header {
