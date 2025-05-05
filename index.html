@@ -22,17 +22,6 @@
         </nav>
     </header>
 
-    <div class="sticky-header">
-        <a href="#" class="logo">Portfolio</a>
-        <nav class="sticky-navbar">
-            <a href="#" style="--i:1;" class="active">Home</a>
-            <a href="#" style="--i:2;">About</a>
-            <a href="skills.html" style="--i:3;">Skills</a>
-            <a href="portfolio.html" style="--i:4;">Portfolio</a>
-            <a href="#" style="--i:5;">Contact</a>
-        </nav>
-    </div>
-
     <section class="home">
         <div class="home-content">
             <h3>Hello, I am</h3>
@@ -58,15 +47,5 @@
             </picture>
         </div>
     </section>
-    <script>
-        window.addEventListener('scroll', function() {
-            const stickyHeader = document.querySelector('.sticky-header');
-            if (window.scrollY > 100) { // Ativa após rolar 100px
-                stickyHeader.classList.add('active');
-            } else {
-                stickyHeader.classList.remove('active');
-            }
-        });
-        </script>
 </body>
 </html>
