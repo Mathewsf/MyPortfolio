@@ -89,6 +89,12 @@ body * {
     font-family: 'Poppins', sans-serif;
 }
 
+body {
+  background: #1f242d;
+  color: #fff;
+  padding: 20px;
+}
+
 .header {
     position: static;
     top: 0;
