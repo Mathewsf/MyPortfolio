@@ -24,7 +24,7 @@ h2#titleSkills {
     font-size: 2.5rem;
     margin: 30px 0 50px;
     color: var(--light);
-    transition: color 0.3s ease; /* Smooth color transition */
+    transition: color 0.3s ease; 
   }
   
   h2#titleSkills:hover {
@@ -53,7 +53,6 @@ h2#titleSkills {
   box-shadow: 0 10px 20px rgba(0, 238, 255, 0.1);
 }
 
-/* Elementos dos Cards */
 .skill-icon {
   font-size: 2.5rem;
   color: var(--primary);
@@ -96,7 +95,6 @@ h2#titleSkills {
   font-weight: bold;
 }
 
-/* Seção complementar */
 .tools-section {
   margin-top: 50px;
   text-align: center;

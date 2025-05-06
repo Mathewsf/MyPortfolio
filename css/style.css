@@ -363,18 +363,18 @@ body {
   }
   .navbar {
     display: flex;
-    overflow-x: auto; /* Permite rolagem horizontal se necessário */
-    -webkit-overflow-scrolling: touch; /* Rolagem suave em iOS */
-    white-space: nowrap; /* Impede a quebra de linha */
-    gap: 10px; /* Espaço entre os itens */
-    padding: 10px 0; /* Espaçamento vertical */
+    overflow-x: auto; 
+    -webkit-overflow-scrolling: touch; 
+    white-space: nowrap; 
+    gap: 10px; 
+    padding: 10px 0; 
   }
 
   .navbar a {
-    font-size: 14px; /* Tamanho menor para caber mais itens */
-    margin-left: 0; /* Remove a margem esquerda individual */
-    flex-shrink: 0; /* Impede que os itens encolham */
-    padding: 5px 10px; /* Espaçamento interno reduzido */
+    font-size: 14px; 
+    margin-left: 0; 
+    flex-shrink: 0; 
+    padding: 5px 10px; 
   }
   .navbar::-webkit-scrollbar {
     display: none;
