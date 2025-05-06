@@ -288,6 +288,19 @@ body {
   font-size: 0.9rem;
 }
 
+@media (max-width: 600px) {
+  .footer-content {
+      grid-template-columns: 1fr;
+  }
+}
+
+.footer-section p {
+  transition: transform 0.3s;
+}
+.footer-section p:hover {
+  transform: translateX(5px);
+}
+
 @media (max-width: 880px) {
   .home {
       padding: 20px 5% 0;
