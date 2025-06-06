@@ -7,6 +7,7 @@
     <title>Mathew Sousa</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pages/contact.css">
     <link rel="shortcut icon" href="imgs/MSfavicon2.ico" type="image/x-icon">
 </head>
 
@@ -16,15 +17,38 @@
 
         <nav class="navbar">
             <a href="index.html" style="--i:1;">Home</a>
-            <a href="about.html" style="--i:2;" class="active">About</a>
+            <a href="about.html" style="--i:2;">About</a>
             <a href="skills.html" style="--i:3;">Skills</a>
             <!--<a href="#" style="--i:4;">Portfolio</a>-->
-            <a href="contact.html" style="--i:5;">Contact</a>
+            <a href="contact.html" style="--i:5;" class="active">Contact</a>
         </nav>
     </header>
 
     <h2 id="titleSkills">Contact Me</h2>
 
+    <label for="nome">Nome*</label><br>
+    <input type="text" id="nome" name="nome" required><br><br>
+
+    <label for="email">E-mail*</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="telefone">Telefone</label><br>
+    <input type="tel" id="telefone" name="telefone"><br><br>
+
+    <label for="assunto">Assunto</label><br>
+    <input type="text" id="assunto" name="assunto"><br><br>
+
+    <label for="mensagem">Mensagem*</label><br>
+    <textarea id="mensagem" name="mensagem" rows="5" required></textarea><br><br>
+
+    <label for="contato">Preferência de Contato</label><br>
+    <select id="contato" name="contato">
+        <option value="email">E-mail</option>
+        <option value="whatsapp">WhatsApp</option>
+        <option value="telefone">Telefone</option>
+    </select><br><br>
+
+    <button type="submit">Enviar</button>
 
     <footer class="site-footer">
         <div class="footer-content">
