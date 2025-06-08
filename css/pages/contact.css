@@ -1,3 +1,51 @@
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
 :root {
     --primary: #0ef;
     --dark: #1f242d;
@@ -10,6 +58,8 @@ h2 {
     font-size: 2.5rem;
     margin: 30px 0 50px;
     color: var(--primary);
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.0s);
 }
 
 form#formct {
@@ -20,6 +70,8 @@ form#formct {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 238, 255, 0.2);
     align-items: center;
+    animation: zoomIn .5s ease forwards;
+    animation-delay: calc(.0s);
 }
 
 label {
