@@ -1,3 +1,51 @@
+@keyframes slideRight {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideTop {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 :root {
   --primary: #0ef;
   --dark: #1f242d;
@@ -22,6 +70,8 @@ h2#titleSkills {
   margin: 30px 0 50px;
   color: var(--primary);
   transition: color 0.3s ease;
+  animation: slideTop .5s ease forwards;
+  animation-delay: calc(.0s);
 }
 
 h2#titleSkills:hover {
@@ -35,7 +85,7 @@ h2#titleSkills:hover {
   gap: 30px;
 }
 
-.skill-card {
+.skill-card-left {
   background: var(--gray);
   border-radius: 15px;
   padding: 25px;
@@ -43,9 +93,28 @@ h2#titleSkills:hover {
   position: relative;
   overflow: hidden;
   border: 1px solid rgba(0, 238, 255, 0.1);
+  animation: slideLeft 1s ease forwards;
+  animation-delay: 0s;
 }
 
-.skill-card:hover {
+.skill-card-left:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 238, 255, 0.1);
+}
+
+.skill-card-right {
+  background: var(--gray);
+  border-radius: 15px;
+  padding: 25px;
+  transition: transform 0.3s;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(0, 238, 255, 0.1);
+  animation: slideRight 1s ease forwards;
+  animation-delay: 0s;
+}
+
+.skill-card-right:hover {
   transform: translateY(-10px);
   box-shadow: 0 10px 20px rgba(0, 238, 255, 0.1);
 }
@@ -96,6 +165,8 @@ h2#titleSkills:hover {
   margin-top: 50px;
   text-align: center;
   margin-bottom: 30px;
+  animation: slideTop 1s ease forwards;
+  animation-delay: 0s;
 }
 
 .tools-grid {
