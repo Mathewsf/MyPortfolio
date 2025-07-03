@@ -27,22 +27,22 @@
     <h2 id="titleSkills">Contact Me</h2>
     <form id="formct">
         <label for="nome">Name*</label><br>
-        <input type="text" id="nome" name="nome" required placeholder="Your name"><br><br>
+        <input type="text" id="name" name="nome" required placeholder="Your name"><br><br>
 
         <label for="email">E-mail*</label><br>
         <input type="email" id="email" name="email" required placeholder="Your email"><br><br>
 
         <label for="telefone">Telephone</label><br>
-        <input type="tel" id="telefone" name="telefone" placeholder="Your phone number"><br><br>
+        <input type="tel" id="telephone" name="telefone" placeholder="Your phone number"><br><br>
 
-        <label for="assunto">Subject</label><br>
-        <input type="text" id="assunto" name="assunto" required placeholder="Write the subject"><br><br>
+        <label for="assunto">Subject*</label><br>
+        <input type="text" id="subject" name="assunto" required placeholder="Write the subject"><br><br>
 
         <label for="mensagem">Message*</label><br>
-        <textarea id="mensagem" name="mensagem" rows="5" required placeholder="Write the message"></textarea><br><br>
+        <textarea id="message" name="mensagem" rows="5" required placeholder="Write the message"></textarea><br><br>
 
         <label for="contato">Contact Preference</label><br>
-        <select id="contato" name="contato">
+        <select id="contact_option" name="contato">
             <option value="email">E-mail</option>
             <option value="whatsapp">WhatsApp</option>
             <option value="telefone">Cell phone</option>
@@ -83,6 +83,39 @@
             <p>© 2025 Mathew Sousa. Made with <i class='bx bx-heart'></i> and coffee.</p>
         </div>
     </footer>
+
+    <script type="module">
+        import { createClient } from "https://esm.sh/@supabase/supabase-js";
+
+        const supabaseUrl = "https://xiohaaukwznukeqkwbsy.supabase.co";
+        const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inhpb2hhYXVrd3pudWtlcWt3YnN5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTE1NjAyNDcsImV4cCI6MjA2NzEzNjI0N30.NOuncFjR5uhMRgtBN2gD5HLCXjcDdGNklxnKWfxl63E";
+        const supabase = createClient(supabaseUrl, supabaseKey);
+
+        const form = document.getElementById("formct");
+
+        form.addEventListener("submit", async (e) => {
+            e.preventDefault();
+
+            const nome = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const telefone = document.getElementById("telephone").value;
+            const assunto = document.getElementById("subject").value;
+            const mensagem = document.getElementById("message").value;
+            const contato = document.getElementById("contact_option").value;
+
+            const { error } = await supabase
+                .from("contact_form")
+                .insert([{ name: nome, email: email, telephone: telefone, subject: assunto, message: mensagem, contact_option: contato }]);
+
+            if (error) {
+                alert("Erro ao enviar.");
+                console.error(error);
+            } else {
+                alert("Enviado com sucesso!");
+                form.reset();
+            }
+        });
+    </script>
 </body>
 
 </html>
